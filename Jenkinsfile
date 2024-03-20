@@ -10,7 +10,7 @@ pipeline {
     stage ('Publish') {
       steps {
         withDockerRegistry([credentialsId:"docker_hub",url: ""]) {
-          sh ''docker push hashmifctraining/jenkinsdemo:"$BUILD_ID"' 
+          sh 'docker push hashmifctraining/jenkinsdemo:"$BUILD_ID"' 
         }
       }
     }
